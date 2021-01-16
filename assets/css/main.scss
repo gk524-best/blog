@@ -1,3 +1,6 @@
+---
+# Main scss file
+---
 @charset "utf-8";
 [data-color-mode=light] {
     --color-bg-primary: #fff;
@@ -23,4 +26,7 @@ sans-serif;
 $base-font-size: 14px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.7;
-@import "reset"
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "reset", "layout";

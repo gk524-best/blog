@@ -37,14 +37,14 @@ a {
     color: var(--color-text-primary);
     text-decoration: none;
     &:hover {
-        color: val(--color-text-active);
+        color: var(--color-text-active);
     }
 }
 
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--color-border-primary);
     border-radius: 3px;
     background-color: #eef;
 }
