@@ -1,0 +1,26 @@
+@charset "utf-8";
+[data-color-mode=light] {
+    --color-bg-primary: #fff;
+    --color-text-primary: #696969;
+    --color-text-active: #000;
+    --color-header-bg: #fff;
+    --color-border-primary: #e1e4e8;
+}
+
+[data-color-mode=dark] {
+    --color-bg-primary: #0d1117;
+    --color-text-primary: #8b949e;
+    --color-text-active: #c9d1d9;
+    --color-header-bg: #161b22;
+    --color-border-primary: #30363d;
+}
+
+$base-font-family: Charter,
+Georgia,
+Helvetica,
+Arial,
+sans-serif;
+$base-font-size: 14px;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.7;
+@import "reset"

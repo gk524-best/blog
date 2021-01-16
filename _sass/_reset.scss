@@ -1,0 +1,72 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+figure>img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    &:hover {
+        color: val(--color-text-active);
+    }
+}
+
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+    >code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    -webkit-text-size-adjust: 100%;
+}
