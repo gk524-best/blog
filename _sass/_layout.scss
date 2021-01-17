@@ -1,10 +1,21 @@
-.site-header {
-    position: sticky;
-    top: 0px;
+.layout-header {
+    height: 256px;
+
+    //position: sticky;
+    //top: 0;
+    //width: 100%;
+    //display: flex;
+    //align-items: center;
+    //background: var(--color-bg-primary);
+    //z-index: 1000;
+    //border-bottom: 1px solid var(--color-border-primary);
+    background: url("/assets/img/banner.jpg") no-repeat;
     width: 100%;
-    display: flex;
-    align-items: center;
-    background: var(--color-bg-primary);
-    z-index: 1000;
-    border-bottom: 1px solid var(--color-border-primary);
+}
+.site-header {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
 }
