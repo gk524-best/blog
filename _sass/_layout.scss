@@ -10,10 +10,55 @@
     background: var(--color-bg-primary);
     border-bottom: 1px solid rgb(234, 234, 234);
 }
+.site-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.site-content .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.site-content .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.site-content .container::after, .site-content .row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
 .site-header {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 1rem;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .site-content .container {
+        width: 750px;
+    }
+    .side-main {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .site-content  .container {
+        width: 970px;
+    }
+    .side-main {
+        width: 66.66666667%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-content  .container {
+        width: 1170px;
+    }
 }

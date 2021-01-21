@@ -1,0 +1,27 @@
+<aside class="right-sidebar">
+    <div class="widget search">
+        <h5>搜索</h5>
+        <div id="search-demo-container">
+            <div class="search-wrapper">
+                <input type="search" id="search-input" placeholder="search...">
+                <ul id="results-container"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="widget side-labels">
+        <h5>标签</h5>
+        <div class="lables">
+
+        </div>
+    </div>
+    <div class="widget latest-blog">
+        <h5>最近的帖子</h5>
+        <ul>
+            {% for post in site.posts limit:6 %}
+                <li>
+                    <a class="post-item" href="{{post.url}}">{{post.title}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</aside>

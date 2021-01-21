@@ -20,4 +20,16 @@ window.addEventListener('DOMContentLoaded',function() {
         theme = storageTheme;
     }
     htmlDom.setAttribute('data-color-mode', theme);
+
+    // search
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
 })

@@ -4,8 +4,15 @@
 
 <body>
     {% include header.html %}
-    <div>
-        {{ content }}
+    <div class="site-content">
+        <div class="container">
+            <div class="row">
+                <main role="main" class="side-main">
+                    {%  %}
+                </main>
+                {% include side.html %}
+            </div>
+        </div>
     </div>
     {% include footer.html %} {% include foot.html %}
 </body>
