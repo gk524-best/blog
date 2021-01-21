@@ -1,2 +1,18 @@
-<script src="{{'/assets/js/simple-jekyll-search.min.js' | absolute_url}}"></script>
-<script type="text/javascript" src="{{'/assets/js/utils.js' | absolute_url}}"></script>
+<script src="{{site.url}}/assets/js/simple-jekyll-search.min.js"></script>
+<script type="text/javascript" src="{{site.url}}/assets/js/utils.js"></script>
+<script type="text/javascript">
+    window.onload = function() {
+        window.simpleJekyllSearch = new SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ site.url }}/assets/js/search.json',
+            searchResultTemplate: '<li><a href="{{ site.url }}{url}">{{title}}</a></li>',
+            noResultsText: 'No results found',
+            limit: 10,
+            fuzzy: false,
+            exclude: ['Welcome']
+        })
+
+        window.simpleJekyllSearch.search("jekyll")
+    }
+</script>

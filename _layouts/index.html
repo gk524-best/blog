@@ -8,12 +8,29 @@
         <div class="container">
             <div class="row">
                 <main role="main" class="side-main">
-                    {%  %}
+                    {{paginator}}
+                    {% for post in paginator.posts %}
+                        <article class="post-section">
+                            <div class="section-wrapper">
+                                <h1 class="h2">{{post.title}}</h1>
+                                <div class="post-info">
+                                    <time>{{post.date | date: "%Y-%m-%d"}}</time>
+                                </div>
+                                <div class="post-detail">
+                                    <div class="excerpt">
+                                        {{post.excerpt}}
+                                    </div>
+                                    <a class="more-link" href="{{post.url | prepend: site.baseurl }}">继续阅读</a>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}
                 </main>
                 {% include side.html %}
             </div>
         </div>
     </div>
+    {% include paginate.html %}
     {% include footer.html %} {% include foot.html %}
 </body>
 
