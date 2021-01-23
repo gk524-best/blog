@@ -70,6 +70,10 @@ ul li {
     list-style: none;
 }
 
+input {
+    outline: none;
+}
+
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;

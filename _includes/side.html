@@ -4,7 +4,11 @@
         <div id="search-demo-container">
             <div class="search-wrapper">
                 <input type="search" id="search-input" placeholder="search..." />
-                <ul id="results-container"></ul>
+                <div class="search-results">
+                    <ul id="results-container">
+                        <div class="line"></div>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -16,7 +20,7 @@
     </div>
     <div class="widget latest-blog">
         <h5>最近的帖子</h5>
-        <ul>
+        <ul class="search-result-show">
             {% for post in site.posts limit:6 %}
                 <li>
                     <a class="post-item" href="{{post.url}}">{{post.title}}</a>
@@ -25,4 +29,20 @@
         </ul>
     </div>
 </aside>
+<script src="{{site.url}}/assets/js/simple-jekyll-search.min.js"></script>
+<script type="text/javascript">
+    window.onload = function() {
+        window.simpleJekyllSearch = new SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ site.url }}/assets/js/search.json',
+            searchResultTemplate: '<li><a class="search-link" href="{url}?query={query}" title="{desc}">{title}</a></li>',
+            noResultsText: 'No results found',
+            limit: 10,
+            fuzzy: false,
+            exclude: ['Welcome']
+        })
 
+        window.simpleJekyllSearch.search("jekyll")
+    }
+</script>

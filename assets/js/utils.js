@@ -20,4 +20,21 @@ window.addEventListener('DOMContentLoaded',function() {
         theme = storageTheme;
     }
     htmlDom.setAttribute('data-color-mode', theme);
+
+    // search
+    const searchInput = document.getElementById('search-input');
+    const searchResult = document.getElementsByClassName('search-results')[0];
+    const searchCont = document.getElementsByClassName('search-wrapper')[0];
+    const body = document.getElementsByTagName('body')[0];
+    body.onclick = function() {
+        searchInput.classList.remove('search-input-focus');
+        searchResult.classList.remove('search-result-show')
+    }
+    searchInput.onfocus = function() {
+        this.classList.add('search-input-focus');
+        searchResult.classList.add('search-result-show')
+    }
+    searchCont.onclick = function(event) {
+        event.stopPropagation();
+    }
 })
