@@ -15,7 +15,11 @@
     <div class="widget side-labels">
         <h5>标签</h5>
         <div class="lables">
-
+            {% for category in site.categories %}
+            <ul>
+                <li><a href="{{ site.baseurl}}/category/{{ category.first }}.html">{{category.first}}（{{category.last.size}}）</a></li>
+            </ul>
+            {% endfor %}
         </div>
     </div>
     <div class="widget latest-blog">

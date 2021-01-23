@@ -38,7 +38,7 @@ plugins:
 #  - jekyll-avatar
 
 gems: [jekyll-paginate]
-paginate: 12
+paginate: 10
 paginate_path: "/page/:num"
 
 

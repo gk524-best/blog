@@ -37,4 +37,26 @@ window.addEventListener('DOMContentLoaded',function() {
     searchCont.onclick = function(event) {
         event.stopPropagation();
     }
+    // copyright
+    const yearCont = document.getElementById('copyright-year');
+    yearCont.innerText = new Date().getFullYear();
+
+    // theme toggle
+    const themeToggle = document.getElementsByClassName('theme-mode-toggle')[0];
+    themeToggle.onclick = function(event) {
+        event.preventDefault();
+        const curTheme = htmlDom.getAttribute('data-color-mode');
+        switch (curTheme) {
+            case 'light':
+                htmlDom.setAttribute('data-color-mode', 'dark');
+                storage.set(themeKey, 'dark');
+                break;
+            case 'dark':
+                htmlDom.setAttribute('data-color-mode', 'light');
+                storage.set(themeKey, 'light');
+                break;
+            default:
+                break;
+        }
+    }
 })

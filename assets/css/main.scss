@@ -2,20 +2,37 @@
 # Main scss file
 ---
 @charset "utf-8";
+
 [data-color-mode=light] {
     --color-bg-primary: #fff;
+    --color-bg-secondary: #fff;
+    --color-dotted: #e9e9e9;
     --color-text-primary: #696969;
     --color-text-active: #000;
     --color-header-bg: #fff;
-    --color-border-primary: #e1e4e8;
+    --color-border-primary: #141526;
+    --color-line: #f0f2f4;
+    --color-text-link-primary: #0366d6;
+    --color-text-link-secondary: #000;
+    --color-widget-border: #e1e4e8;
+    --color-search-bg: #fff;
+    --color-search-result-border: #d4d4d5;
 }
 
 [data-color-mode=dark] {
-    --color-bg-primary: #0d1117;
-    --color-text-primary: #8b949e;
+    --color-bg-primary: #141516;
+    --color-bg-secondary: #1b1b1e;
+    --color-text-primary: #d4d4d5;
     --color-text-active: #c9d1d9;
     --color-header-bg: #161b22;
-    --color-border-primary: #30363d;
+    --color-border-primary: #d4d4d5;
+    --color-line: #242526;
+    --color-dotted: #30363d;
+    --color-text-link-primary: #58a6ff;
+    --color-text-link-secondary: #d4d4d5;
+    --color-widget-border: #30363d;
+    --color-search-bg: #0d1117;
+    --color-search-result-border: #d4d4d5;
 }
 
 $base-font-family: Charter,
